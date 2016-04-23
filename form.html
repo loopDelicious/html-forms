@@ -1,75 +1,77 @@
 <!doctype html>
-<html>
-    <head>
-        <title>Ubermelon Order Form</title>
-    </head>
-    <body>
-        <h1>Order!</h1>
+
+<header>
+    <title>Ubermelon order form</title>
+    <link rel="stylesheet" href="style.css">
+</header>
+
+<div id="wrap">
+<body>
+    <div id="primary">
         <table>
-            <tr>
-                <th>Melon Name</th>
-                <th>Price per lb.</th>
-            </tr>
-            <tr>
-                <td>Watermelon</td>
-                <td>$1.59</td>
-            </tr> 
-            <tr>
-                <td>Honeydew</td>
-                <td>$0.99</td>
-            </tr>
-            <tr>
-                <td>Canteloupe</td>
-                <td>$1.29</td>
-            </tr>
-            <tr>
-                <td>Crenshaw</td>
-                <td>$2.19</td>
-            </tr>
-            <tr>
-                <td>Canary</td>
-                <td>$11.99</td>
-            </tr>
-        </table>
-        <p>Place your orders here!  You know you want to.</p>
-        <form>
-            <label for="field-firstname">First Name: </label> 
-            <input type="text" name="firstname" id="field-firstname">
+        <th>Melon name</th>
+        <th>Melon price</th>
+        <tr>
+            <td>Watermelon</td>
+            <td>$1.59</td>
+        </tr>
+         <tr>
+            <td>Honeydew</td>
+            <td>$0.99</td>
+        </tr>
+         <tr>
+            <td>Canteloupe</td>
+            <td>$1.29</td>
+        </tr>
+         <tr>
+            <td>Crenshaw</td>
+            <td>$2.19</td>
+        </tr>
+        <tr>
+            <td>Canary</td>
+            <td>$11.99</td>
+        </tr>
+    </table>
+    </div>
+
+    <div id="secondary">
+        <h1>Order!</h1><br>
+        <h1>Place your orders here!  You know you want to.</h1><br>
+        <form action="https://ubermelon-order-form.herokuapp.com/process" method="GET">
+            First name: <input type="text" name="firstname"><br>
             <br>
-            <label for="field-lastname">Last Name: </label>
-            <input type="text" name="lastname" id="field-lastname">
+            Last name: <input type="text" name"lastname"><br>
             <br>
-            Melon Type:
+            Melon type:<br>
                 <select name="melontype">
                     <option value="watermelon">Watermelon</option>
                     <option value="honeydew">Honeydew</option>
                     <option value="canteloupe">Canteloupe</option>
                     <option value="crenshaw">Crenshaw</option>
                     <option value="canary">Canary</option>
-                </select>
             <br>
-            <label for="field-quantity">Quantity*: </label>
-            <input type="text" name="quantity" id="field-quantity">
+            Quantity: <input type="text" name="quantity"><br>
+            Delivery Time: <br>
+            <input type="radio" name="quantity" value="am">AM<br>
+            <input type="radio" name="quantity" value="pm">PM<br>
+            <input type="radio" name="quantity" value="wat">WAT<br>
             <br>
-            Delivery Time:
-            <input type="radio" name="time" value="am">AM
-            <input type="radio" name="time" value="pm">PM
-            <input type="radio" name="time" value="wat">WAT
+            Returning Customer:<br>
+            <input type="radio" name="returning" value="yes">YES<br>
+            <input type="radio" name="returning" value="no">NO<br>
             <br>
-            Returning Customer?
-            <input type="radio" name="returning" value="yes">YES
-            <input type="radio" name="returning" value="no">NO
+            For Statistical Purposes:<br>
+            <input type="checkbox" name="stats" value="dog">Dog<br>
+            <input type="checkbox" name="stats" value="cat">Cat<br>
+            <input type="checkbox" name="stats" value="hedgehog">Hedgehog<br>
+            <input type="checkbox" name="stats" value="balloonicorn">Balloonicorn<br>
+            <input type="checkbox" name="stats" value="yak">Yak<br>
             <br>
-            Statistics:
-            <input type="checkbox" name="stats" value="dog">Dog
-            <input type="checkbox" name="stats" value="cat">Cat
-            <input type="checkbox" name="stats" value="hedgehog">Hedgehog
-            <input type="checkbox" name="stats" value="balloonicorn">Balloonicorn
-            <input type="checkbox" name="stats" value="yak">Yak
+            <input type="submit" value="Do it now!">
             <br>
-            <form action="https://ubermelon-order-form.herokuapp.com/process" method="POST">    
-            <input type="submit">
         </form>
-        <footer>*Quantities given are by the flat.</footer>
-    </body>
-</html>
+        <footer> *Quantities given are by the flat.</footer>
+    </div>
+
+</body>
+</div>
